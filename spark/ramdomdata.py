@@ -112,11 +112,18 @@ getramdomcolumnDate(nb_colonne_date)
 
 
 df = pd.DataFrame(df2)
+choix = int(input("veuill ez entrer un choix "))
 
-from pathlib import Path  
-filepath = Path('folder/subfolder/data.csv')  
-filepath.parent.mkdir(parents=True, exist_ok=True)  
-df.to_csv(filepath)  
+if choix == 1:
+    from pathlib import Path  
+    filepath = Path('folder/subfolder/data.csv')  
+    filepath.parent.mkdir(parents=True, exist_ok=True)  
+    df.to_csv(filepath)  
+elif choix == 2 :
+    from pathlib import Path  
+    filepath = Path('folder/subfolder/data.csv')  
+    filepath.parent.mkdir(parents=True, exist_ok=True)  
+    df.to_json(filepath)  
 
 
 exit()
